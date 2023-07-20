@@ -1,17 +1,17 @@
-echo -e "\e[33mconfiguring NodeJS Repos\e[0m"
+echo -e "\e[33m configuring NodeJS Repos\e[0m"
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash &>>/tmp/roboshop.log
 
-echo -e "\e[33minstalling NodeJS\e[0m"
+echo -e "\e[33m installing NodeJS\e[0m"
 yum install nodejs -y &>>/tmp/roboshop.log
 
-echo -e "\e[33madd application user\e[0m"
+echo -e "\e[33m add application user\e[0m"
 useradd roboshop &>>/tmp/roboshop.log
 
 echo -e "\e[33m create application directory\e[0m"
 rm -rf /app &>>/tmp/roboshop.log
 mkdir /app
 
-echo -e "\e[33mdownload application content\e[0m"
+echo -e "\e[33m download application content\e[0m"
 curl -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart.zip &>>/tmp/roboshop.log
 cd /app
 
