@@ -10,11 +10,12 @@ mkdir /app
 
 echo -e "\e[33m download application content  \e[0m"
 curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shipping.zip &>>/tmp/roboshop.log
-cd /app &>>/tmp/roboshop.log
+
 
 echo -e "\e[33m extract application content \e[0m"
+cd /app
 unzip /tmp/shipping.zip &>>/tmp/roboshop.log
-cd /app &>>/tmp/roboshop.log
+
 
 echo -e "\e[33m download maven dependencies  \e[0m"
 mvn clean package &>>/tmp/roboshop.log
