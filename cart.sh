@@ -28,5 +28,5 @@ cp /home/centos/roboshop-shell/cart.service /etc/systemd/system/cart.service &>>
 echo -e "\e[33m start cart service\e[0m"
 systemctl daemon-reload &>>/tmp/roboshop.log
 systemctl enable cart &>>/tmp/roboshop.log
-systemctl start cart &>>/tmp/roboshop.log
+systemctl restart cart &>>/tmp/roboshop.log
 
